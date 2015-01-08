@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:padding="2dp"
+    tools:context="com.car.LocationActivity$PlaceholderFragment" >
+    <!-- 
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    -->
+    
+    <LinearLayout 
+        android:id="@+id/location_map"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+		
+        >   
+    
+  	 <TextView 
+  	     android:id="@+id/t_location_on_map"
+ 		 android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Location on Map"        
+         android:background="@color/silvertinge"      
+      />
+    
+  	 <View
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:id="@+id/space"
+		android:layout_below="@+id/t_location_on_map"
+        >
+    </View>
+    
+  	 <ImageView 
+  	    android:id="@+id/i_current_location"
+  	    android:layout_width="fill_parent"
+  	    android:layout_height="wrap_content"
+  	    android:contentDescription="Current Location"
+  	    android:adjustViewBounds="true"
+  	    android:src="@drawable/blank"
+  	      
+	 />  	 
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/location_attributes"
+        android:layout_below="@+id/location_map"
+        android:adjustViewBounds="true"
+        android:scrollbars="vertical"        
+        android:scrollbarStyle="insideOverlay"
+        
+        >
+    
+     <EditText
+        android:id="@+id/o_location_name"
+        android:inputType="text"
+        android:hint="Location Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     /> 
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:id="@+id/space2"
+		android:layout_below="@+id/o_location_name"
+        >
+    </View>
+        
+    <TextView
+        android:id="@+id/t_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"        
+        android:layout_below="@+id/space1"
+ 		style="?android:listSeparatorTextViewStyle"
+ 		
+        />
+
+    <TextView        
+        android:id="@+id/l_address1"        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Address 1"
+        android:layout_below="@+id/t_address"
+        android:text="N/A"
+         />
+    
+    <TextView
+        android:id="@+id/l_address2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"         
+        android:hint="Address 2"
+        android:layout_below="@+id/l_address1"
+       android:text="N/A"
+       
+        />
+    <TextView
+        android:id="@+id/l_address3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Address 3"
+        android:layout_below="@+id/l_address2"
+    	android:text="N/A"
+       />
+    <TextView
+        android:id="@+id/l_address4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Address 4"
+        android:layout_below="@+id/l_address3"
+    	android:text="N/A"
+      />
+    <TextView
+        android:id="@+id/l_address5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Address 5"
+        android:layout_below="@+id/l_address4"
+    	android:text="N/A"
+     />
+    
+    <View
+        android:id="@+id/space3"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/l_address5"
+        >
+    </View>
+    </LinearLayout>
+
+    <LinearLayout 
+	    android:id="@+id/ButtonLayout" 
+	    android:layout_height="wrap_content" 
+	    android:layout_width="fill_parent" 
+		android:layout_below="@+id/location_attributes"
+	    >
+	    <Button 
+	        android:id="@+id/o_cancel" 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content" 
+	        android:layout_weight="1" android:text="Cancel">
+	    </Button>
+	    <Button 
+	        android:id="@+id/o_save" 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" 
+	        android:text="Save"
+	        android:enabled="false"
+	        >
+	    </Button>
+	</LinearLayout>       
+</RelativeLayout>
